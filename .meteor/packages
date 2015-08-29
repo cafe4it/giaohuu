@@ -20,3 +20,9 @@ arillo:flow-router-helpers
 reactive-var
 dburles:collection-helpers
 underscorestring:underscore.string
+aldeed:autoform
+raix:handlebar-helpers
+aldeed:moment-timezone
+rzymek:moment-locale-vi
+aldeed:autoform-bs-datetimepicker
+tsega:bootstrap3-datetimepicker@=3.1.3_3

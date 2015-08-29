@@ -1,0 +1,64 @@
+<template name="match_create">
+    <div class="window window-left-50">
+        <div class="row row-margin-5">
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                    <li><a href="{{pathFor 'home'}}">Trang chủ</a></li>
+                    <li><a href="{{pathFor 'matches'}}">Danh sách trận đấu</a></li>
+                    <li class="active">Tạo trận đấu</li>
+                </ol>
+            </div>
+        </div>
+        <div class="row row-margin-5">
+            <div class="col-md-12">
+                {{#if $eq currentUser null}}
+                    <p class="bg-danger">Bạn phải đăng nhập mới có quyền tạo trận đấu.</p>
+                {{/if}}
+                {{#autoForm collection="Matches" id="insertMatchForm" type="insert"}}
+                    <fieldset>
+                        <legend>Tạo 1 trận đấu</legend>
+                        <ol class="ol-field">
+                            <li>
+                                <div class="ol-field-li">
+                                    {{> afFieldInput name="sport" firstOption=false options=sportOptions}}
+                                </div>
+                            </li>
+                            <li>
+                                <div class="ol-field-li">
+                                    {{> afFieldInput name="isPublic" firstOption=false options=PublicOrPrivate}}
+                                </div>
+                            </li>
+                            <li>
+                                <div class="ol-field-li">
+                                    {{> afFieldInput name="vsp" firstOption=false options=VSTypeOptions}}
+                                </div>
+                            </li>
+                            <li>
+                                <div class="ol-field-li">
+                                    {{> afFieldInput name="location" placeholder="Ghi rõ địa chỉ và kéo thả biểu tượng bên bản đồ đúng vị trí" }}
+                                </div>
+                            </li>
+                            <li>
+                                <div class="ol-field-li">
+                                    {{> afFieldInput name="startDate" placeholder="Chọn ngày/giờ bắt đầu" }}
+                                </div>
+                            </li>
+                        </ol>
+                    </fieldset>
+                    {{#if currentUser}}
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Lưu lại</button>
+                        <button type="reset" class="btn btn-default"><i class="fa fa-eraser"></i>Làm lại</button>
+                    {{else}}
+                        <p class="bg-danger">Bạn phải đăng nhập mới có quyền tạo trận đấu.</p>
+                    {{/if}}
+                {{/autoForm}}
+            </div>
+        </div>
+    </div>
+    <div class="window window-right-50">
+        <div class="map-container">
+            {{> maps type='match_create'}}
+        </div>
+    </div>
+</template>
+

@@ -1,0 +1,8 @@
+{
+  "default" : [
+    {"code" : "BONGDA", "name" : "Bóng đá", "icon" : "/icons/marker/bongda.png"},
+    {"code" : "BONGRO", "name" : "Bóng rổ", "icon" : "/icons/marker/bongro.png"},
+    {"code" : "BONGBAN", "name" : "Bóng bàn", "icon" : "/icons/marker/bongban.png"},
+    {"code" : "BONGCHUYEN", "name" : "Bóng chuyền", "icon" : "/icons/marker/bongchuyen.png"}
+  ]
+}
