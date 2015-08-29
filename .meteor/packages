@@ -16,3 +16,7 @@ aldeed:simple-schema
 jquery
 underscore
 bevanhunt:leaflet
+arillo:flow-router-helpers
+reactive-var
+dburles:collection-helpers
+underscorestring:underscore.string

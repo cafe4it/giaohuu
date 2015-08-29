@@ -1,4 +1,46 @@
 body {
-    min-height: 2000px;
-    padding-top: 70px;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.container-fluid{
+    min-height: 99%;
+    height: 100%;
+}
+
+.row-margin-5{
+    margin-left: -5px !important;
+    margin-right: -5px !important;
+}
+
+.map-container{
+    min-height: 99%;
+    height: 100%;
+}
+
+#map{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.window{
+    top: 50px;
+    position: fixed;
+}
+
+.window-left-50{
+    width : 50%;
+    left : 0px;
+    bottom: 0px;
+    overflow-y: scroll;
+}
+
+.window-right-50{
+    left: 50%;
+    right: 0px;
+    bottom: 0px;
+    overflow-x: hidden;
 }

@@ -1,0 +1,15 @@
+{
+  "default" : [
+    {"name" : "1 chọi 1", "playersInTeam" : 1},
+    {"name" : "2 chọi 2", "playersInTeam" : 2},
+    {"name" : "3 chọi 3", "playersInTeam" : 3},
+    {"name" : "4 chọi 4", "playersInTeam" : 4},
+    {"name" : "5 chọi 5", "playersInTeam" : 5},
+    {"name" : "6 chọi 6", "playersInTeam" : 6},
+    {"name" : "7 chọi 7", "playersInTeam" : 7},
+    {"name" : "8 chọi 8", "playersInTeam" : 8},
+    {"name" : "9 chọi 9", "playersInTeam" : 9},
+    {"name" : "10 chọi 10", "playersInTeam" : 10},
+    {"name" : "11 chọi 11", "playersInTeam" : 11}
+  ]
+}
