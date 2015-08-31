@@ -100,10 +100,12 @@ AutoForm.hooks({
             return doc;
         },
         onSubmit : function(insertDoc, updateDoc, currentDoc){
-            console.log(insertDoc);
+            //console.log(insertDoc);
         },
         onSuccess: function(formType, result) {
-            console.log(result);
+            var params = {_id : result},
+                path = FlowRouter.path('match_detail', params);
+            FlowRouter.go(path);
         },
     }
 });

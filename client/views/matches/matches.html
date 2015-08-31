@@ -10,14 +10,21 @@
         </div>
         <div class="row row-margin-5">
             <div class="col-md-12">
-                <div class="pull-right">
-                    <a href="{{pathFor 'match_create'}}" class="btn btn-success"><i class="fa fa-plus"></i> Tạo trận đấu</a>
-                </div>
+                <a href="{{pathFor 'match_create'}}" class="btn btn-success"><i class="fa fa-plus"></i> Tạo trận đấu</a>
+                <hr/>
             </div>
         </div>
         <div class="row row-margin-5">
             <div class="col-md-12">
-
+                {{#if isReady}}
+                <ul class="list-group">
+                {{#each matches}}
+                    <li class="list-group-item">{{title}}</li>
+                {{/each}}
+                </ul>
+                {{else}}
+                    {{> spinner}}
+                {{/if}}
             </div>
         </div>
     </div>

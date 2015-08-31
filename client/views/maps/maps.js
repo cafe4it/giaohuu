@@ -88,14 +88,11 @@ var customMarkerIcon = function (iconUrl, iconSize, iconAnchor, popupAnchor, cla
 var onLocationFound = function (e) {
     var radius = e.accuracy / 2;
     var map = this.MAP.get(),
-        icon = customMarkerIcon('/icons/marker/me1.png', [32, 32], [16, 16], [-2, -8], null);
+        icon = customMarkerIcon('/icons/marker/me1.png', [32, 32], [16, 16], [-2, -8], 'meMarkerIcon');
     var marker = L.marker(e.latlng,{icon : icon}).addTo(map),
         circle = L.circle(e.latlng, radius).addTo(map),
         popup = marker.bindPopup("Bạn đang trong bán kính " + radius + " mét tại điểm này.");
     popup.openPopup();
-    if(this.data.type === 'match_create'){
-        this.markerSport.get().setLatLng(e.latlng)
-    }
 }
 
 var onLocationError = function (e) {
