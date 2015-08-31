@@ -1,0 +1,1 @@
+Matches.permit('insert').ifLoggedIn().apply();
